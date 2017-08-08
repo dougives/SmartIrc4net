@@ -1109,9 +1109,9 @@ namespace Meebey.SmartIrc4net
 #endif
                 
 #if LOG4NET
-                _Logger.Debug("Stop(): aborting thread...");
+                _Logger.Debug("Stop(): aborting thread... just kidding!");
 #endif
-                _Thread.Abort();
+                //_Thread.Abort();
                 // make sure we close the stream after the thread is gone, else
                 // the thread will think the connection is broken!
 #if LOG4NET
@@ -1224,10 +1224,10 @@ namespace Meebey.SmartIrc4net
             public void Stop()
             {
 #if LOG4NET
-                Logger.Connection.Debug("Stopping WriteThread...");
+                Logger.Connection.Debug("Stopping WriteThread... hopefully ...");
 #endif
                 
-                _Thread.Abort();
+                //_Thread.Abort();
                 // make sure we close the stream after the thread is gone, else
                 // the thread will think the connection is broken!
                 _Thread.Join();
@@ -1474,7 +1474,7 @@ namespace Meebey.SmartIrc4net
             /// </summary>
             public void Stop()
             {
-                _Thread.Abort();
+                //_Thread.Abort();
                 _Thread.Join();
             }
 
